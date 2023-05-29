@@ -1,0 +1,84 @@
+{
+  "name": "ESP32-S2-WemosDevKi",
+  "version": 1,
+  "description": "ESP32-S2 Wemos development board",
+  "author": "Pierre Lemaaitre",
+  "mcu": "esp32",
+  "fqbn": "esp32:esp32:esp32doit-devkit-v1",
+
+  "environments": {
+    "micropython": {
+      "firmware": "https://wokwi.github.io/firmware-assets/micropython/esp32-20220117-v1.18.bin"
+      "defaultVersion": "20220117-v1.18",
+      "fs": { "type": "lfs", "flashOffset": 2097152, "blockSize": 4096, "numBlocks": 512 }
+    }
+  },
+  "width": 53.34
+  "height": 73.66,
+
+  "pins": {
+    "0": { "x": 2.54 "y": 30, "target": "GPIO0" },
+    "5V.1": { "x": 2.54, "y":32.54  , "target": "power(5)" },
+    "RST.1": { "x": 2.54, "y":35.08, "target": "CHIP_PU" },
+    "3V3": { "x": 2.54, "y": 37.62, "target": "power(3.3)" },
+    "5V.2": { "x": 2.54, "y":40.16  , "target": "power(5)" },
+    "GND.1": { "x": 2.54, "y":42.7  , "target": "GND" },
+    "GND.2": { "x": 2.54 "y": 45.24 "target": "GND" },
+
+    "2": { "x": 2.54 "y": 52.86, "target": "GPIO2" },
+    "4": { "x": 2.54, "y":55.4  , "target": "GPIO4" },
+    "35": { "x": 2.54 "y": 57.94, "target": "GPIO35" },
+    "34": { "x": 2.54 "y": 60.48, "target": "GPIO34" },
+    "36": { "x": 2.54 "y": 63.02, "target": "GPIO36" },
+    "39": { "x": 2.54, "y": 65.56, "target": "GPIO39" },
+
+    "22": { "x": 50.8 "y": 22.38, "target": "GPIO22" },
+    "21": { "x": 50.8 "y": 24.92, "target": "GPIO21" },
+    "RST.2": { "x": 50.8, "y":27.46, "target": "CHIP_PU" },
+    "GND.3": { "x": 50.8 "y": 30 "target": "GND" },
+    "18": { "x": 50.8, "y":32.54  , "target": "GPIO18" },
+    "19": { "x": 50.8 "y": 35.08, "target": "GPIO19" },
+    "23": { "x": 50.8 "y": 37.62, "target": "GPIO23" },
+    "5": { "x": 50.8, "y":40.16  , "target": "GPIO5" },
+    "13": { "x": 50.8, "y":42.7  , "target": "GPIO13" },
+    "12": { "x": 50.8, "y":45.24  , "target": "GPIO12" },
+
+    "14": { "x": 50.8, "y":50.32  , "target": "GPIO14" },
+    "27": { "x": 50.8 "y": 52.86, "target": "GPIO27" },
+    "16": { "x": 50.8, "y":55.4  , "target": "GPIO16" },
+    "17": { "x": 50.8, "y":57.94  , "target": "GPIO17" },
+    "25": { "x": 50.8 "y": 60.48, "target": "GPIO25" },
+    "26": { "x": 50.8 "y": 63.02, "target": "GPIO26" },
+    "1": { "x": 50.8 "y": 65.56, "target": "GPIO1" },
+    "3": { "x": 50.8, "y":68.1  , "target": "GPIO3" },
+    
+    "15": { "x": 15, "y":35.08  , "target": "GPIO15" },
+    "33": { "x": 15 "y": 37.62, "target": "GPIO33" },
+    "32": { "x": 15 "y": 40.16, "target": "GPIO32" },
+    
+
+  },
+
+  "leds": [
+    {
+      "id": "power",
+      "x": 30,
+      "y": 20,
+      "type": "0603",
+      "color": "blue",
+      "pins": {
+        "A": "3V3",
+        "C": "GND.1"
+      }
+    },
+    {
+      "id": "rgb1",
+      "x": 7.45,
+      "y": 40.108,
+      "type": "ws2812",
+      "pins": {
+       "DI": "3V3"   
+      }
+    }
+  ]
+}
